@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  scroll-behavior: smooth;
+}
+
 .wavehand{
   animation: waving-hand 2.5s infinite;
   transform-origin: 70% 70%;
