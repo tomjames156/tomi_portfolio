@@ -1,4 +1,4 @@
-import { WorkExperience } from './definitions'
+import { WorkExperience, Project } from './definitions'
 
 export const workExperiences: WorkExperience[] = [
     {
@@ -33,5 +33,44 @@ export const workExperiences: WorkExperience[] = [
             "Lorem ipsum dolor sit amet consectetur. Viverra odio orci tellus ornare blandit. Eros nisl vulputate suscipit lobortis lobortis."
         ]
 
+    }
+]
+
+export const projectsList: Project[] = [
+    {
+        proj_id: 0,
+        proj_img: "/tourify.png",
+        proj_name: 'Tourify',
+        proj_descr: "A website that helps tourists discover exciting locations in Abuja",
+        tech_used: ["ReactJS", "Firebase", "SCSS"],
+        github_link: "https://github.com/tomjames156/Tourify",
+        live_site: "https://tourify-iota.vercel.app/"
+    },
+    {
+        proj_id: 1,
+        proj_img: "/tourify.png",
+        proj_name: 'Tourify',
+        proj_descr: "A website that helps tourists discover exciting locations in Abuja",
+        tech_used: ["ReactJS", "Firebase", "SCSS"],
+        github_link: "https://github.com/tomjames156/Tourify",
+        live_site: "https://tourify-iota.vercel.app/"
+    },
+    {
+        proj_id: 2,
+        proj_img: "/tourify.png",
+        proj_name: 'Tourify',
+        proj_descr: "A website that helps tourists discover exciting locations in Abuja",
+        tech_used: ["ReactJS", "Firebase", "SCSS"],
+        github_link: "https://github.com/tomjames156/Tourify",
+        live_site: "https://tourify-iota.vercel.app/"
+    },
+    {
+        proj_id: 3,
+        proj_img: "/tourify.png",
+        proj_name: 'Tourify',
+        proj_descr: "A website that helps tourists discover exciting locations in Abuja",
+        tech_used: ["ReactJS", "Firebase", "SCSS"],
+        github_link: "https://github.com/tomjames156/Tourify",
+        live_site: "https://tourify-iota.vercel.app/"
     }
 ]

@@ -9,7 +9,7 @@ export default function Experience(){
             <div className='mt-4 flex justify-between'>
                 <ul className='w-[20%] flex flex-col gap-4'>
                     {workExperiences.map((exp, index) => (
-                        index !==  1?
+                        index !==  2?
                         <li key={exp.exp_id} className='flex justify-between pr-10'>
                             <p className='uppercase font-bold text-gray-400'>{exp.organisation}</p>
                         </li> :
@@ -20,10 +20,10 @@ export default function Experience(){
                     ))}
                 </ul>
                 <div className='w-[80%]'>
-                    <h1 className='font-bold text-[1.2rem]'>{workExperiences[0].role} @ <span className='text-blue-900'>{workExperiences[0].organisation}</span></h1>
-                    <h2 className='uppercase mt-2 mb-8 text-[0.9rem] text-gray-500'>{workExperiences[0].duration}</h2>
+                    <h1 className='font-bold text-[1.2rem]'>{workExperiences[2].role} @ <span className='text-blue-900'>{workExperiences[2].organisation}</span></h1>
+                    <h2 className='uppercase mt-2 mb-8 text-[0.9rem] text-gray-500'>{workExperiences[2].duration}</h2>
                     <ul className='flex flex-col gap-y-8'>
-                        {workExperiences[0].experiences.map((bullet, index) => (
+                        {workExperiences[1].experiences.map((bullet, index) => (
                             <li key={index} className='flex justify-between items-start gap-4'>
                                 <div>
                                     <div className='w-[0.5rem] bg-blue-900 h-[0.5rem] rounded-xl'>
