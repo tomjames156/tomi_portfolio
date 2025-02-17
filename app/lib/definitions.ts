@@ -1,5 +1,5 @@
 export type WorkExperience = {
-    id: string,
+    organisation: string;
     exp_id: number,
     role: string,
     duration: string,

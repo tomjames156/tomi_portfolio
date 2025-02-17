@@ -1,4 +1,6 @@
-const workExperiences = [
+import { WorkExperience } from './definitions'
+
+export const workExperiences: WorkExperience[] = [
     {
         exp_id: 0,
         organisation: "Nile University",
