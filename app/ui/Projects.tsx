@@ -94,7 +94,7 @@ export default function Projects(){
                     )
                 })}
             </div>
-            <ul className='grid grid-cols-3 gap-x-4 gap-y-6 px-32'>
+            <ul className='grid grid-cols-3 gap-x-4 gap-y-6 px-24'>
                 {projectTiles.map((project, index) => {
                     return (
                     <li key={index} className='border-[1px] border-solid border-black rounded-xl py-5 px-4 flex flex-col'>
