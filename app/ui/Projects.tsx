@@ -89,7 +89,7 @@ export default function Projects(){
             </div>
             <div className='w-full h-16 flex items-center justify-center gap-x-4'>
                 {projectsSlides && projectsSlides.map((project, index) => {
-                    return (index != activeIndex ? <div key={index} className="w-12 h-[0.275rem] bg-[#D9D9D9] cursor-pointer" onClick={() => {setActiveIndex(index)}}></div> :
+                    return (index != activeIndex ? <div key={index} className="w-12 h-[0.275rem] bg-[#D9D9D9] cursor-pointer hover:bg-gray-400 transition transition-all duration-100" onClick={() => {setActiveIndex(index)}}></div> :
                         <div key={index} className="w-12 h-[0.275rem] bg-blue-900 cursor-pointer" onClick={() => {setActiveIndex(index)}}></div>
                     )
                 })}
@@ -97,10 +97,12 @@ export default function Projects(){
             <ul className='grid grid-cols-3 gap-x-4 gap-y-6 px-24'>
                 {projectTiles.map((project, index) => {
                     return (
-                    <li key={index} className='border-[1px] border-solid border-black rounded-xl py-5 px-4 flex flex-col'>
+                    <li key={index} className='border-[1px] border-solid border-black rounded-xl py-5 px-4 flex flex-col cursor-default hover:-mt-2 hover:border-blue-900 hover:border-[3px] transition transition-all duration-200'>
                         <div className='flex gap-4 justify-end'>
                             {project.github_link && <Link 
                                 href={project.github_link}
+                                target='_blank'
+                                className='hover:-mt-1 transition transition-all duration-10'
                             >
                                 <Image
                                     src={gitLogoBlue}
@@ -111,6 +113,8 @@ export default function Projects(){
                             </Link>}
                             {project.live_site && <Link
                                 href={project.live_site}
+                                target='_blank'
+                                className='hover:-mt-1 transition transition-all duration-10'
                             >
                                 <Image
                                     src={earthBlue}
