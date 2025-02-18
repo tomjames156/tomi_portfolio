@@ -1,4 +1,4 @@
-import { WorkExperience, Project } from './definitions'
+import { WorkExperience, ProjectSlide, ProjectTile } from './definitions'
 
 export const workExperiences: WorkExperience[] = [
     {
@@ -36,7 +36,7 @@ export const workExperiences: WorkExperience[] = [
     }
 ]
 
-export const projectsList: Project[] = [
+export const projectsSlides: ProjectSlide[] = [
     {
         proj_id: 0,
         proj_img: "/tourify.png",
@@ -50,7 +50,7 @@ export const projectsList: Project[] = [
         proj_id: 1,
         proj_img: "/tourify.png",
         proj_name: 'Tourify',
-        proj_descr: "A website that helps tourists discover exciting locations in Abuja",
+        proj_descr: "A website that helps tourists discover exciting locations within Abuja",
         tech_used: ["ReactJS", "Firebase", "SCSS"],
         github_link: "https://github.com/tomjames156/Tourify",
         live_site: "https://tourify-iota.vercel.app/"
@@ -59,7 +59,7 @@ export const projectsList: Project[] = [
         proj_id: 2,
         proj_img: "/tourify.png",
         proj_name: 'Tourify',
-        proj_descr: "A website that helps tourists discover exciting locations in Abuja",
+        proj_descr: "A website that helps tourists discover exciting locations within Abuja",
         tech_used: ["ReactJS", "Firebase", "SCSS"],
         github_link: "https://github.com/tomjames156/Tourify",
         live_site: "https://tourify-iota.vercel.app/"
@@ -72,5 +72,16 @@ export const projectsList: Project[] = [
         tech_used: ["ReactJS", "Firebase", "SCSS"],
         github_link: "https://github.com/tomjames156/Tourify",
         live_site: "https://tourify-iota.vercel.app/"
+    }
+]
+
+export const projectTiles: ProjectTile[] = [
+    {
+        proj_id: 0,
+        proj_name: "Medbolt Landing Page",
+        proj_descr: "A landing page website application for a Nigerian healthcare tech startup",
+        tech_used: ["Reactjs", "SASS"],
+        github_link: "https://github.com/tomjames156/",
+        live_site: "https://medbolt-website.vercel.app/"
     }
 ]
