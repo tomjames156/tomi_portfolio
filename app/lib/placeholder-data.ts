@@ -83,5 +83,45 @@ export const projectTiles: ProjectTile[] = [
         tech_used: ["Reactjs", "SASS"],
         github_link: "https://github.com/tomjames156/",
         live_site: "https://medbolt-website.vercel.app/"
+    }, 
+    {
+        proj_id: 1,
+        proj_name: "Medbolt Landing Page",
+        proj_descr: "A landing page website application for a Nigerian healthcare tech startup",
+        tech_used: ["Reactjs", "SASS"],
+        github_link: "https://github.com/tomjames156/",
+        live_site: "https://medbolt-website.vercel.app/"
+    },
+    {
+        proj_id: 2,
+        proj_name: "Medbolt Landing Page",
+        proj_descr: "A landing page website application for a Nigerian healthcare tech startup",
+        tech_used: ["Reactjs", "SASS"],
+        github_link: "https://github.com/tomjames156/",
+        live_site: "https://medbolt-website.vercel.app/"
+    },
+    {
+        proj_id: 3,
+        proj_name: "Medbolt Landing Page",
+        proj_descr: "A landing page website application for a Nigerian healthcare tech startup",
+        tech_used: ["Reactjs", "SASS"],
+        github_link: "https://github.com/tomjames156/",
+        live_site: "https://medbolt-website.vercel.app/"
+    },
+    {
+        proj_id: 4,
+        proj_name: "Medbolt Landing Page",
+        proj_descr: "A landing page website application for a Nigerian healthcare tech startup",
+        tech_used: ["Reactjs", "SASS"],
+        github_link: "https://github.com/tomjames156/",
+        live_site: "https://medbolt-website.vercel.app/"
+    },
+    {
+        proj_id: 5,
+        proj_name: "Medbolt Landing Page",
+        proj_descr: "A landing page website application for a Nigerian healthcare tech startup",
+        tech_used: ["ReactJS", "SASS"],
+        github_link: "https://github.com/tomjames156/",
+        live_site: "https://medbolt-website.vercel.app/"
     }
 ]

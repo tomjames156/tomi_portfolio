@@ -3,6 +3,8 @@
 import { libre_franklin } from './fonts'
 import { useState } from 'react'
 import Link from 'next/link'
+import gitLogoBlue from "../../public/git-blue.png"
+import earthBlue from "../../public/earth-blue.png"
 import { projectsSlides, projectTiles } from '../lib/placeholder-data'
 import Image from 'next/image'
 
@@ -92,13 +94,35 @@ export default function Projects(){
                     )
                 })}
             </div>
-            <ul>
+            <ul className='grid grid-cols-3 gap-x-4 gap-y-6 px-32'>
                 {projectTiles.map((project, index) => {
                     return (
-                    <li key={index}>
-                        <p>{project.proj_name}</p>
-                        <p>{project.proj_descr}</p>
-                        <p>{listItems(project.tech_used)}</p>
+                    <li key={index} className='border-[1px] border-solid border-black rounded-xl py-5 px-4 flex flex-col'>
+                        <div className='flex gap-4 justify-end'>
+                            {project.github_link && <Link 
+                                href={project.github_link}
+                            >
+                                <Image
+                                    src={gitLogoBlue}
+                                    width={20}
+                                    height={15}
+                                    alt='Github Logo'
+                                />
+                            </Link>}
+                            {project.live_site && <Link
+                                href={project.live_site}
+                            >
+                                <Image
+                                    src={earthBlue}
+                                    width={18}
+                                    height={15}
+                                    alt='Earth Globe Blue'
+                                />
+                            </Link>}
+                        </div>
+                        <p className='font-bold text-lg mt-6'>{project.proj_name}</p>
+                        <p className={`${libre_franklin.className} antialiased leading-[1.3rem] mt-6 mb-12`}>{project.proj_descr}</p>
+                        <p className='text-sm'>{listItems(project.tech_used)}</p>
                     </li>)
                 }) }
             </ul>
