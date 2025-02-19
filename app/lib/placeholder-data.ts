@@ -39,21 +39,19 @@ export const workExperiences: WorkExperience[] = [
 export const projectsSlides: ProjectSlide[] = [
     {
         proj_id: 0,
-        proj_img: "/tourify.png",
-        proj_name: 'Tourify',
-        proj_descr: "A website that helps tourists discover exciting locations in Abuja",
-        tech_used: ["ReactJS", "Firebase", "SCSS"],
-        github_link: "https://github.com/tomjames156/Tourify",
-        live_site: "https://tourify-iota.vercel.app/"
+        proj_img: "/heart-disease.png",
+        proj_name: 'Heart Disease Analysis',
+        proj_descr: "Exploratory Data Analysis on patients' data to determine patterns and likelihood of heart disease",
+        tech_used: ["Python", "Pandas", "Matplotlib", "Seaborn"],
+        live_site: "https://www.kaggle.com/code/akinwandetomisin/heart-disease-exploratory-data-analysis"
     },
     {
         proj_id: 1,
-        proj_img: "/tourify.png",
-        proj_name: 'Tourify',
-        proj_descr: "A website that helps tourists discover exciting locations within Abuja",
-        tech_used: ["ReactJS", "Firebase", "SCSS"],
-        github_link: "https://github.com/tomjames156/Tourify",
-        live_site: "https://tourify-iota.vercel.app/"
+        proj_img: "/student-depression.png",
+        proj_name: 'Student Depression Analysis',
+        proj_descr: "Exploratory Data Analysis on data about students mental health and sleep habits at different education levels",
+        tech_used: ["Python", "Pandas", "Matplotlib", "Seaborn"],
+        live_site: "https://www.kaggle.com/code/akinwandetomisin/student-depression-exploratory-data-analysis"
     },
     {
         proj_id: 2,
@@ -66,12 +64,11 @@ export const projectsSlides: ProjectSlide[] = [
     },
     {
         proj_id: 3,
-        proj_img: "/tourify.png",
+        proj_img: "/medbolt-website.png",
         proj_name: 'Tourify',
-        proj_descr: "A website that helps tourists discover exciting locations in Abuja",
-        tech_used: ["ReactJS", "Firebase", "SCSS"],
-        github_link: "https://github.com/tomjames156/Tourify",
-        live_site: "https://tourify-iota.vercel.app/"
+        proj_descr: "A landing page website for a Nigerian healthcare tech startup",
+        tech_used: ["ReactJS", "SCSS"],
+        live_site: "https://medbolt-website.vercel.app/"
     }
 ]
 

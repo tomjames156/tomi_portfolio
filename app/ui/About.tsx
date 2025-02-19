@@ -9,17 +9,17 @@ export default function About(){
             <h1 className="font-semibold text-2xl">About Me</h1>
             <div className="flex gap-20">
                 <div className="basis-[80%]">
-                    <p className={`mt-4 leading-[1.4rem] text-[1.1rem] ${libre_franklin.className} antialiased`}>Lorem ipsum dolor sit amet consectetur. Viverra odio orci tellus ornare blandit. Eros nisl vulputate suscipit lobortis lobortis sed ut. Mauris arcu diam ridiculus ut consectetur risus ornare posuere. Proin commodo dui ultricies senectus aliquam.</p>
+                    <p className={`mt-4 leading-[1.4rem] text-[1.1rem] ${libre_franklin.className} antialiased`}>I am studying for a Bachelor's of Science in Software engineering student at Nile University of Nigeria, Abuja. At the same time, I'm working towards a career in Data Science through learning from resources online.</p>
                     <p className={`mt-4 leading-[1.4rem] text-[1.1rem] ${libre_franklin.className} antialiased`}>Here are some technologies I’ve worked with:</p>
                     <ul className="w-[50%] mt-5 grid grid-cols-2">
-                        <TechnologyUsed technology="React.js"/>
-                        <TechnologyUsed technology="React.js"/>
-                        <TechnologyUsed technology="React.js"/>
-                        <TechnologyUsed technology="React.js"/>
-                        <TechnologyUsed technology="React.js"/>
-                        <TechnologyUsed technology="React.js"/>
+                        <TechnologyUsed technology="Pandas"/>
+                        <TechnologyUsed technology="Python"/>
+                        <TechnologyUsed technology="FastAPI"/>
+                        <TechnologyUsed technology="Django"/>
+                        <TechnologyUsed technology="React"/>
+                        <TechnologyUsed technology="JavaScript"/>
                     </ul>
-                    <p className={`mt-4 leading-[1.4rem] text-[1.1rem] ${libre_franklin.className} antialiased`}>Outside of working, I’m interested in learning about Data Science. I also enjoy lifting weights, swimming, listening to music, and reading. </p>
+                    <p className={`mt-4 leading-[1.4rem] text-[1.1rem] ${libre_franklin.className} antialiased`}>Outside of studying, I enjoy lifting weights, swimming, listening to music, watching movies and reading fantasy books. </p>
                 </div>
                 <div className="basis-[20%]">
                     <div>

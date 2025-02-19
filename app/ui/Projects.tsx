@@ -50,7 +50,7 @@ export default function Projects(){
                     alt={`${projectsSlides[activeIndex].proj_name} project screenshot`}
                     width={50000}
                     height={5000}
-                    className='border-[1px] border-solid border-black rounded-2xl blur-sm'
+                    className='border-[1px] border-solid border-black rounded-2xl blur-sm w-full h-[35rem]'
                 />
                 <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-y-2 text-center bg-blue-900 text-white pt-8 pb-4 px-20 w-[38rem] rounded-xl'>
                     <p className='text-[1.9rem] font-medium'>{projectsSlides[activeIndex].proj_name}</p>
@@ -60,6 +60,7 @@ export default function Projects(){
                         {projectsSlides[activeIndex].github_link && <Link 
                             href={projectsSlides[activeIndex].github_link}
                             target='_blank'
+                            title='GitHub Repository'
                         >
                             <Image 
                                 src="/git.png"
@@ -70,6 +71,7 @@ export default function Projects(){
                         {projectsSlides[activeIndex].live_site && <Link
                             href={projectsSlides[activeIndex].live_site}
                             target='_blank'
+                            title='Live Site'
                         >
                             <Image 
                                 src="/public.png"

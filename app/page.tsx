@@ -6,7 +6,6 @@ import About from './ui/About'
 import Experience from './ui/Experience'
 import Projects from './ui/Projects'
 import Footer from './ui/components/Footer'
-import { libre_franklin } from './ui/fonts'
 
 export default function Home() {
   return (
