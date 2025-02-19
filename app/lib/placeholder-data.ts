@@ -65,7 +65,7 @@ export const projectsSlides: ProjectSlide[] = [
     {
         proj_id: 3,
         proj_img: "/medbolt-website.png",
-        proj_name: 'Tourify',
+        proj_name: 'Medbolt',
         proj_descr: "A landing page website for a Nigerian healthcare tech startup",
         tech_used: ["ReactJS", "SCSS"],
         live_site: "https://medbolt-website.vercel.app/"
@@ -75,50 +75,39 @@ export const projectsSlides: ProjectSlide[] = [
 export const projectTiles: ProjectTile[] = [
     {
         proj_id: 0,
-        proj_name: "Medbolt Landing Page",
-        proj_descr: "A landing page website application for a Nigerian healthcare tech startup",
-        tech_used: ["Reactjs", "SASS"],
-        github_link: "https://github.com/tomjames156/",
-        live_site: "https://medbolt-website.vercel.app/"
+        proj_name: "Taskify Frontend",
+        proj_descr: "A web application with an intuitive user interface that allows users to efficently manage tasks.",
+        tech_used: ["React.js", "SASS"],
+        github_link: "https://github.com/tomjames156/task_manager",
     }, 
     {
         proj_id: 1,
-        proj_name: "Medbolt Landing Page",
-        proj_descr: "A landing page website application for a Nigerian healthcare tech startup",
-        tech_used: ["Reactjs", "SASS"],
-        github_link: "https://github.com/tomjames156/",
-        live_site: "https://medbolt-website.vercel.app/"
+        proj_name: "Taskify Backend",
+        proj_descr: "A Python backend to manage user's tasks and profiles as well as authentication.",
+        tech_used: ["Python (Django, DRF)", "JWT"],
+        github_link: "https://github.com/tomjames156/taskify_api",
     },
     {
         proj_id: 2,
-        proj_name: "Medbolt Landing Page",
-        proj_descr: "A landing page website application for a Nigerian healthcare tech startup",
-        tech_used: ["Reactjs", "SASS"],
-        github_link: "https://github.com/tomjames156/",
-        live_site: "https://medbolt-website.vercel.app/"
+        proj_name: "Getlinked Hackathon",
+        proj_descr: "A landing page which was my submisson for the Getlinked web development pre-hackathon",
+        tech_used: ["React.js", "SASS"],
+        github_link: "https://github.com/tomjames156/Getlinked-hackathon",
+        live_site: "https://getlinked-hackathon-three.vercel.app/"
     },
     {
         proj_id: 3,
-        proj_name: "Medbolt Landing Page",
-        proj_descr: "A landing page website application for a Nigerian healthcare tech startup",
-        tech_used: ["Reactjs", "SASS"],
-        github_link: "https://github.com/tomjames156/",
-        live_site: "https://medbolt-website.vercel.app/"
+        proj_name: "Sticky Notes Clone",
+        proj_descr: "A fullstack web application clone of the Windows Sticky Notes app.",
+        tech_used: ["Python (Django)", "SASS", "TinyMCE"],
+        github_link: "https://github.com/tomjames156/Sticky-Notes",
     },
     {
         proj_id: 4,
-        proj_name: "Medbolt Landing Page",
-        proj_descr: "A landing page website application for a Nigerian healthcare tech startup",
-        tech_used: ["Reactjs", "SASS"],
-        github_link: "https://github.com/tomjames156/",
-        live_site: "https://medbolt-website.vercel.app/"
+        proj_name: "Tomi's Food Reviews",
+        proj_descr: "A static website/blog with an appealing user interface  where I review foods sold at Nile University.",
+        tech_used: ["HTML", "CSS", "JavaScript"],
+        github_link: "https://github.com/tomjames156/food_reviews",
+        live_site: "https://tomis-food-reviews.netlify.app/"
     },
-    {
-        proj_id: 5,
-        proj_name: "Medbolt Landing Page",
-        proj_descr: "A landing page website application for a Nigerian healthcare tech startup",
-        tech_used: ["ReactJS", "SASS"],
-        github_link: "https://github.com/tomjames156/",
-        live_site: "https://medbolt-website.vercel.app/"
-    }
 ]
