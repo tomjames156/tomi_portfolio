@@ -31,32 +31,6 @@ export default function About(){
                             className="rounded-3xl"
                         />
                     </div>
-                    <div className="mt-8 flex items-center justify-center gap-6">
-                        <div>
-                            <Image
-                                src="/gmail logo.png"
-                                alt='myself'
-                                width={30}
-                                height={30}
-                            />
-                        </div>
-                        <div>
-                            <Image
-                                src="/github-logo.png"
-                                alt='myself'
-                                width={25}
-                                height={25}
-                            />
-                        </div>
-                        <div>
-                            <Image
-                                src="/linkedin.png"
-                                alt='myself'
-                                width={20}
-                                height={20}
-                            />
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

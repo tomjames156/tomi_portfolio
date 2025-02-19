@@ -42,7 +42,7 @@ export default function Projects(){
     }
 
     return (
-        <section className="mt-40 mx-40">
+        <section className="mt-40 mx-40" id="projects">
             <h1 className="font-semibold text-2xl">Projects</h1>
             <div className='mt-12 relative w-full h-fit'>
                 <Image
