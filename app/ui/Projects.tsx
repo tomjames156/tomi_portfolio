@@ -2,15 +2,37 @@
 
 import { libre_franklin } from './fonts'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 import gitLogoBlue from "../../public/git-blue.png"
 import earthBlue from "../../public/earth-blue.png"
 import { projectsSlides, projectTiles } from '../lib/placeholder-data'
 import Image from 'next/image'
 
+const container = {
+    initial: { opacity: 1, scale: 0},
+    whileInView: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            delayChildren: 0.1,
+            staggerChildren: 0.2,
+        }
+    }
+}
+
+const item  = {
+    initial: { y: 20, opacity: 0 },
+    whileInView: {
+        y: 0,
+        opacity: 1
+    }
+}
+
+
 export default function Projects(){
 
-    const [activeIndex, setActiveIndex] = useState(1)
+    const [activeIndex, setActiveIndex] = useState(0)
 
     const listItems = (arr: string[]) => {
         let list_str = ""
@@ -44,14 +66,27 @@ export default function Projects(){
     return (
         <section className="mt-40 mx-40" id="projects">
             <h1 className="font-semibold text-2xl">Projects</h1>
-            <div className='mt-12 relative w-full h-fit'>
-                <Image
-                    src={projectsSlides[activeIndex].proj_img}
-                    alt={`${projectsSlides[activeIndex].proj_name} project screenshot`}
-                    width={50000}
-                    height={5000}
-                    className='border-[1px] border-solid border-black rounded-2xl blur-sm w-full h-[35rem]'
-                />
+            <div className='mt-12 relative w-full h-fit overflow-hidden'>
+                <div
+                    className='flex transition transition-all ease duration-200 object-contain relative'
+                    style={{
+                        transform: `translateX(-${activeIndex * 100}%)`
+                    }}
+                >
+                    {projectsSlides.map((proj, index) => {
+                        return(
+                            <>
+                            <Image
+                                src={proj.proj_img}
+                                alt={`${proj.proj_name} project screenshot`}
+                                width={50000}
+                                height={100}
+                                className='border-[1px] border-solid border-black blur-[2px] rounded-2xl w-[100%] h-[auto]'
+                            />
+                            </>
+                        )
+                    })}
+                </div>
                 <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-y-2 text-center bg-blue-900 text-white pt-8 pb-4 px-20 w-[38rem] rounded-xl'>
                     <p className='text-[1.9rem] font-medium'>{projectsSlides[activeIndex].proj_name}</p>
                     <p className={`${libre_franklin.className} antialiased`}>{projectsSlides[activeIndex].proj_descr}</p>
@@ -66,7 +101,8 @@ export default function Projects(){
                                 src="/git.png"
                                 width={20}
                                 height={25}
-                                alt="github logo"/>
+                                alt="github logo"
+                                className='hover:scale-[1.1]'/>
                         </Link>}
                         {projectsSlides[activeIndex].live_site && <Link
                             href={projectsSlides[activeIndex].live_site}
@@ -77,7 +113,8 @@ export default function Projects(){
                                 src="/public.png"
                                 width={18}
                                 height={15}
-                                alt="earth"/>
+                                alt="earth"
+                                className='hover:scale-[1.1]'/>
                         </Link>}
                     </div>
                 </div>
@@ -96,10 +133,24 @@ export default function Projects(){
                     )
                 })}
             </div>
-            <ul className='grid grid-cols-3 gap-x-4 gap-y-6 px-24'>
+            <motion.ul 
+                className='grid grid-cols-3 gap-x-4 gap-y-6 px-24'
+                variants={container}
+                initial='initial'
+                whileInView="whileInView"
+                viewport={{once: true}}>
                 {projectTiles.map((project, index) => {
                     return (
-                    <li key={index} className='border-[1px] border-solid border-black rounded-xl py-5 px-4 flex flex-col cursor-default hover:-mt-2 hover:border-blue-900 hover:border-[3px] transition transition-all duration-200'>
+                    <motion.li 
+                        key={index} 
+                        className='border-[1px] border-solid border-black rounded-xl py-5 px-4 flex flex-col cursor-default hover:-mt-2 hover:border-blue-900 hover:border-[3px] transition transition-all duration-200' 
+                        variants={item}
+                        transition={{
+                            type: "spring",
+                            stiffness: 100,
+                            damping: 15
+                        }}
+                        >
                         <div className='flex gap-4 justify-end'>
                             {project.github_link && <Link 
                                 href={project.github_link}
@@ -129,9 +180,9 @@ export default function Projects(){
                         <p className='font-bold text-lg mt-6'>{project.proj_name}</p>
                         <p className={`${libre_franklin.className} antialiased leading-[1.3rem] mt-6 mb-12`}>{project.proj_descr}</p>
                         <p className='text-sm'>{listItems(project.tech_used)}</p>
-                    </li>)
+                    </motion.li>)
                 }) }
-            </ul>
+            </motion.ul>
         </section>
     )
 }

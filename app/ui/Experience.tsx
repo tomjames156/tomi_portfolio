@@ -2,11 +2,32 @@
 
 import { workExperiences } from '@/app/lib/placeholder-data'
 import { libre_franklin } from './fonts'
+import { motion } from 'framer-motion'
 import { useState } from 'react'
+
+const container = {
+    initial: { opacity: 1, scale: 0},
+    whileInView: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            delayChildren: 0.1,
+            staggerChildren: 0.1,
+        }
+    }
+}
+
+const item  = {
+    initial: { x: 20, opacity: 0},
+    whileInView: {
+        x: 0,
+        opacity: 1
+    }
+}
 
 export default function Experience(){
 
-    const [ activeIndex, setActiveIndex ] = useState(0)
+    const [ activeIndex, setActiveIndex ] = useState(1)
 
     return(
         <section className="mt-20 mx-40" id='experience'>
@@ -27,17 +48,22 @@ export default function Experience(){
                 <div className='w-[80%]'>
                     <h1 className='font-bold text-[1.2rem]'>{workExperiences[activeIndex].role} @ <span className='text-blue-900'>{workExperiences[activeIndex].organisation}</span></h1>
                     <h2 className='uppercase mt-2 mb-8 text-[0.9rem] text-gray-500'>{workExperiences[activeIndex].duration}</h2>
-                    <ul className='flex flex-col gap-y-8'>
+                    <motion.ul 
+                        className='flex flex-col gap-y-4' 
+                        initial="initial"
+                        whileInView="whileInView"
+                        variants={container}
+                        viewport={{once: true}}>
                         {workExperiences[activeIndex].experiences.map((bullet, index) => (
-                            <li key={index} className='flex justify-between items-start gap-4'>
+                            <motion.li key={index} className='flex items-start gap-4' variants={item}>
                                 <div>
                                     <div className='w-[0.5rem] bg-blue-900 h-[0.5rem] rounded-xl'>
                                     </div>
                                 </div>
                                 <div className={`text-[1.1rem] ${libre_franklin.className} antialiased -mt-2`}>{bullet}</div>
-                            </li>
+                            </motion.li>
                         ))}
-                    </ul>
+                    </motion.ul>
                 </div>
             </div>
             

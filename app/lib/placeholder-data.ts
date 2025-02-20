@@ -7,8 +7,10 @@ export const workExperiences: WorkExperience[] = [
         role: "Software Engineering Student",
         duration: "September 2022 - Present",
         experiences: [
-            "Lorem ipsum dolor sit amet consectetur. Viverra odio orci tellus ornare blandit. Eros nisl vulputate suscipit lobortis lobortis sed ut. Mauris arcu diam ridiculus ut consectetur risus ornare posuere. Proin commodo dui ultricies senectus aliquam.",
-            "Lorem ipsum dolor sit amet consectetur. Viverra odio orci tellus ornare blandit. Eros nisl vulputate suscipit lobortis lobortis."
+            "Headed the design and development of Tourify, a conceptual technology startup aimed at improving tourism within Abuja.",
+            "Collaborated with other members of the design team in creating prototypes of website’s intuitive user interface using Figma.",
+            "Led the implementation of the design into a functional website using ReactJS and SCSS. Collaborated with and guided other members of the development team in completing the implementation within established deadlines.",
+            "Implemented user authentication and a simple backend using Firebase."
         ]
 
     },
@@ -18,8 +20,10 @@ export const workExperiences: WorkExperience[] = [
         role: "Data Science Intern",
         duration: "July 2024 - Present",
         experiences: [
-            "Lorem ipsum dolor sit amet consectetur. Viverra odio orci tellus ornare blandit. Eros nisl vulputate suscipit lobortis lobortis sed ut. Mauris arcu diam ridiculus ut consectetur risus ornare posuere. Proin commodo dui ultricies senectus aliquam.",
-            "Lorem ipsum dolor sit amet consectetur. Viverra odio orci tellus ornare blandit. Eros nisl vulputate suscipit lobortis lobortis."
+            "Developed and containerised a data-intensive API using FastAPI for generating result summaries, aggregates and visualisations in the ERMS application.",
+            "Automated the population of databases with result data using Python scripts.",
+            "Implemented an AI model locally using Python to generate description metadata for different electoral divisions.",
+            "Implemented web scrapers using BeautifulSoup to get states’ descriptions from Wikipedia."
         ]
 
     },
@@ -29,8 +33,8 @@ export const workExperiences: WorkExperience[] = [
         role: "Frontend Engineer",
         duration: "December 2022 - December 2023",
         experiences: [
-            "Lorem ipsum dolor sit amet consectetur. Viverra odio orci tellus ornare blandit. Eros nisl vulputate suscipit lobortis lobortis sed ut. Mauris arcu diam ridiculus ut consectetur risus ornare posuere. Proin commodo dui ultricies senectus aliquam.",
-            "Lorem ipsum dolor sit amet consectetur. Viverra odio orci tellus ornare blandit. Eros nisl vulputate suscipit lobortis lobortis."
+            "Developed the landing page for the Medbolt AI solutions flagship product Medbolt, an AI powered healthcare solution.",
+            "Collaborated with the lead product designer in implementing the user interface of Medbolt's web application using ReactJS and SCSS."
         ]
 
     }
