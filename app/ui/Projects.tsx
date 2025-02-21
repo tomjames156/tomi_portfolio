@@ -64,7 +64,7 @@ export default function Projects(){
     }
 
     return (
-        <section className="mt-40 mx-40" id="projects">
+        <section className="mx-5 mt-20 sm:mx-10 border-2 lg:mx-20 xl:mx-40 xl:mt-40" id="projects">
             <h1 className="font-semibold text-2xl">Projects</h1>
             <div className='mt-12 relative w-full h-fit overflow-hidden'>
                 <div
@@ -75,7 +75,6 @@ export default function Projects(){
                 >
                     {projectsSlides.map((proj, index) => {
                         return(
-                            <>
                             <Image
                                 src={proj.proj_img}
                                 alt={`${proj.proj_name} project screenshot`}
@@ -83,11 +82,10 @@ export default function Projects(){
                                 height={100}
                                 className='border-[1px] border-solid border-black blur-[2px] rounded-2xl w-[100%] h-[auto]'
                             />
-                            </>
                         )
                     })}
                 </div>
-                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-y-2 text-center bg-blue-900 text-white pt-8 pb-4 px-20 w-[38rem] rounded-xl'>
+                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-y-2 text-center bg-blue-900 text-white pt-8 pb-4 px-20 w-[38rem] rounded-xl hidden lg:flex'>
                     <p className='text-[1.9rem] font-medium'>{projectsSlides[activeIndex].proj_name}</p>
                     <p className={`${libre_franklin.className} antialiased`}>{projectsSlides[activeIndex].proj_descr}</p>
                     <p className='font-bold text-[0.9rem]'>{listItems(projectsSlides[activeIndex].tech_used)}</p>
@@ -126,6 +124,39 @@ export default function Projects(){
                     chevron_right
                 </div>
             </div>
+            <div className='w-full border-2 flex justify-center lg:hidden'>
+                <div className='flex flex-col gap-y-2 text-center bg-blue-900 text-white pt-8 pb-4 px-5 w-full sm:w-[38rem] sm:px-20  mt-4 rounded-xl'>
+                    <p className='text-[1.9rem] font-medium'>{projectsSlides[activeIndex].proj_name}</p>
+                    <p className={`${libre_franklin.className} antialiased`}>{projectsSlides[activeIndex].proj_descr}</p>
+                    <p className='font-bold text-[0.9rem]'>{listItems(projectsSlides[activeIndex].tech_used)}</p>
+                    <div className='flex gap-x-2 justify-center'>
+                        {projectsSlides[activeIndex].github_link && <Link 
+                            href={projectsSlides[activeIndex].github_link}
+                            target='_blank'
+                            title='GitHub Repository'
+                        >
+                            <Image 
+                                src="/git.png"
+                                width={20}
+                                height={25}
+                                alt="github logo"
+                                className='hover:scale-[1.1]'/>
+                        </Link>}
+                        {projectsSlides[activeIndex].live_site && <Link
+                            href={projectsSlides[activeIndex].live_site}
+                            target='_blank'
+                            title='Live Site'
+                        >
+                            <Image 
+                                src="/public.png"
+                                width={18}
+                                height={15}
+                                alt="earth"
+                                className='hover:scale-[1.1]'/>
+                        </Link>}
+                    </div>
+                </div>
+            </div>
             <div className='w-full h-16 flex items-center justify-center gap-x-4'>
                 {projectsSlides && projectsSlides.map((project, index) => {
                     return (index != activeIndex ? <div key={index} className="w-12 h-[0.275rem] bg-[#D9D9D9] cursor-pointer hover:bg-gray-400 transition transition-all duration-100" onClick={() => {setActiveIndex(index)}}></div> :
@@ -134,7 +165,7 @@ export default function Projects(){
                 })}
             </div>
             <motion.ul 
-                className='grid grid-cols-3 gap-x-4 gap-y-6 px-24'
+                className='grid grid-cols-1 gap-x-4 gap-y-6 px-2 xs:grid-cols-2 xs:px-0 sm:px-10 sm:grid-cols-2 sm:justify-between lg:grid-cols-3 xl:px-24'
                 variants={container}
                 initial='initial'
                 whileInView="whileInView"

@@ -6,10 +6,10 @@ import linkedin from "../../public/linkedin.png"
 
 export default function Navbar(){
     return (
-        <nav className="flex justify-between align-center bg-white px-12 py-4 fixed left-0 top-0 w-full z-20">
+        <nav className="flex justify-between align-center px-5 bg-white sm:px-10 lg:px-12 py-4 fixed left-0 top-0 w-full z-20">
             <div className="flex-2 flex items-center gap-3">
-                <Link href='/' className="font-bold text-[1.2rem] hover:text-gray-500 transition transition-all duration-200">tom1s1n</Link>
-                <div>                
+                <Link href='/' className="font-bold text-[1.2rem] hover:text-gray-500 transition transition-all duration-200">tom1sin</Link>
+                <div className="hidden sm:block">                
                     <div className="flex items-center justify-center gap-4">
                         <Link
                             href="mailto:tomjames156@gmail.com"

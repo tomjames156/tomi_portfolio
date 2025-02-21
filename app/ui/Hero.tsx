@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export default function Hero(){
     return (
-        <section className='flex justify-center py-60' id='hero'>
-            <div className='max-w-[45%] flex-col text-center'>
+        <section className='flex justify-center pt-60 pb-20 lg:pb-60' id='hero'>
+            <div className='flex-col text-center max-w-[85%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] xl:max-w[45%]'>
                 <p className='text-9xl wavehand'>👋🏾</p>
                 <h1 className='text-4xl mt-10 font-bold'>Hi there, I’m Tomisin</h1>
                 <h3 className='text-2xl mt-4 font-medium'>I love writing code</h3>
