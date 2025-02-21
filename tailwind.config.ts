@@ -8,7 +8,9 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      '2xs': '290px',
+      'fold': '290px',
+      '2xs': '360px',
+      'xxs': '480px',
       'xs': '560px',
       'sm': '640px',
       'md': '768px',

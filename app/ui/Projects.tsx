@@ -65,7 +65,7 @@ export default function Projects(){
 
     return (
         <section className="mx-5 mt-20 sm:mx-10 border-2 lg:mx-20 xl:mx-40 xl:mt-40" id="projects">
-            <h1 className="font-semibold text-2xl">Projects</h1>
+            <h1 className="font-semibold text-xl xs:text-2xl">Projects</h1>
             <div className='mt-12 relative w-full h-fit overflow-hidden'>
                 <div
                     className='flex transition transition-all ease duration-200 object-contain relative'
@@ -116,19 +116,19 @@ export default function Projects(){
                         </Link>}
                     </div>
                 </div>
-                <div className='absolute top-1/2 -left-2 -translate-y-1/2 material-symbols-rounded text-[6rem] cursor-pointer hover:-left-4 hover:scale-[1.15] transition-transform duration-200' onClick={prevProject}>
+                <div className='absolute top-1/2 -left-1 -translate-y-1/2 material-symbols-rounded text-[2.5rem] cursor-pointer hover:-left-2 hover:scale-[1.1] transition-transform duration-200 xs:-left-2 xs:text-[6rem] xs:hover:-left-4 xs:hover:scale-[1.15]' onClick={prevProject}>
                     chevron_left
                 </div>
-                <div className='absolute top-1/2 -right-2
-                -translate-y-1/2 material-symbols-rounded text-[6rem] cursor-pointer hover:-right-4 hover:scale-[1.15] transition-transform duration-200' onClick={nextProject}>
+                <div className='absolute top-1/2 -right-1
+                -translate-y-1/2 material-symbols-rounded text-[2.5rem] cursor-pointer hover:-right-2 hover:scale-[1.1] transition-transform duration-200 xs:-right-2 xs:text-[6rem] xs:hover:-right-4 xs:hover:scale-[1.15]' onClick={nextProject}>
                     chevron_right
                 </div>
             </div>
             <div className='w-full border-2 flex justify-center lg:hidden'>
-                <div className='flex flex-col gap-y-2 text-center bg-blue-900 text-white pt-8 pb-4 px-5 w-full sm:w-[38rem] sm:px-20  mt-4 rounded-xl'>
-                    <p className='text-[1.9rem] font-medium'>{projectsSlides[activeIndex].proj_name}</p>
-                    <p className={`${libre_franklin.className} antialiased`}>{projectsSlides[activeIndex].proj_descr}</p>
-                    <p className='font-bold text-[0.9rem]'>{listItems(projectsSlides[activeIndex].tech_used)}</p>
+                <div className='flex flex-col gap-y-1 text-center bg-blue-900 text-white pt-4 pb-2 px-2 w-full mt-4 rounded-xl xs:pt-8 xs:pb-4 xs:px-5 xs:gap-y-2 2xs:w-[95%] xs:max-w-[38rem] xs:px-20'>
+                    <p className='text-[1rem] font-medium sm:text-[1.9rem]'>{projectsSlides[activeIndex].proj_name}</p>
+                    <p className={`${libre_franklin.className} antialiased text-[0.7rem]`}>{projectsSlides[activeIndex].proj_descr}</p>
+                    <p className='font-bold text-[0.65rem] sm:text-[1rem]'>{listItems(projectsSlides[activeIndex].tech_used)}</p>
                     <div className='flex gap-x-2 justify-center'>
                         {projectsSlides[activeIndex].github_link && <Link 
                             href={projectsSlides[activeIndex].github_link}
@@ -159,13 +159,13 @@ export default function Projects(){
             </div>
             <div className='w-full h-16 flex items-center justify-center gap-x-4'>
                 {projectsSlides && projectsSlides.map((project, index) => {
-                    return (index != activeIndex ? <div key={index} className="w-12 h-[0.275rem] bg-[#D9D9D9] cursor-pointer hover:bg-gray-400 transition transition-all duration-100" onClick={() => {setActiveIndex(index)}}></div> :
-                        <div key={index} className="w-12 h-[0.275rem] bg-blue-900 cursor-pointer" onClick={() => {setActiveIndex(index)}}></div>
+                    return (index != activeIndex ? <div key={index} className="w-8 h-[0.275rem] bg-[#D9D9D9] cursor-pointer hover:bg-gray-400 transition transition-all duration-100 2xs:w-12" onClick={() => {setActiveIndex(index)}}></div> :
+                        <div key={index} className="w-8 h-[0.275rem] bg-blue-900 cursor-pointer 2xs:w-12" onClick={() => {setActiveIndex(index)}}></div>
                     )
                 })}
             </div>
             <motion.ul 
-                className='grid grid-cols-1 gap-x-4 gap-y-6 px-2 xs:grid-cols-2 xs:px-0 sm:px-10 sm:grid-cols-2 sm:justify-between lg:grid-cols-3 xl:px-24'
+                className='grid grid-cols-1 gap-x-4 gap-y-6 px-2 2xs:px-10 xs:grid-cols-2 xs:px-0 sm:px-10 sm:grid-cols-2 sm:justify-between lg:grid-cols-3 xl:px-24'
                 variants={container}
                 initial='initial'
                 whileInView="whileInView"
@@ -209,8 +209,8 @@ export default function Projects(){
                             </Link>}
                         </div>
                         <p className='font-bold text-lg mt-6'>{project.proj_name}</p>
-                        <p className={`${libre_franklin.className} antialiased leading-[1.3rem] mt-6 mb-12`}>{project.proj_descr}</p>
-                        <p className='text-sm'>{listItems(project.tech_used)}</p>
+                        <p className={`${libre_franklin.className} antialiased text-[0.9rem] leading-[1.3rem] mt-6 mb-12 xs:text-[1rem]`}>{project.proj_descr}</p>
+                        <p className='text-[0.8rem] xs:text-sm'>{listItems(project.tech_used)}</p>
                     </motion.li>)
                 }) }
             </motion.ul>

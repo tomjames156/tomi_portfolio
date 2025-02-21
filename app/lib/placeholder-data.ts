@@ -87,7 +87,7 @@ export const projectTiles: ProjectTile[] = [
     {
         proj_id: 1,
         proj_name: "Taskify Backend",
-        proj_descr: "A Python backend to manage user's tasks and profiles as well as authentication.",
+        proj_descr: "A Python backend service to manage user's tasks and profiles as well as authentication in the Taskify app.",
         tech_used: ["Python (Django, DRF)", "JWT"],
         github_link: "https://github.com/tomjames156/taskify_api",
     },
