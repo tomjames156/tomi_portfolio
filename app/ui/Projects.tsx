@@ -64,7 +64,7 @@ export default function Projects(){
     }
 
     return (
-        <section className="mx-5 mt-20 sm:mx-10 border-2 lg:mx-20 xl:mx-40 xl:mt-40" id="projects">
+        <section className="mx-5 mt-20 sm:mx-10 lg:mx-20 xl:mx-40 xl:mt-40" id="projects">
             <h1 className="font-semibold text-xl xs:text-2xl">Projects</h1>
             <div className='mt-12 relative w-full h-fit overflow-hidden'>
                 <div
@@ -124,7 +124,7 @@ export default function Projects(){
                     chevron_right
                 </div>
             </div>
-            <div className='w-full border-2 flex justify-center lg:hidden'>
+            <div className='w-full flex justify-center lg:hidden'>
                 <div className='flex flex-col gap-y-1 text-center bg-blue-900 text-white pt-4 pb-2 px-2 w-full mt-4 rounded-xl xs:pt-8 xs:pb-4 xs:px-5 xs:gap-y-2 2xs:w-[95%] xs:max-w-[38rem] xs:px-20'>
                     <p className='text-[1rem] font-medium sm:text-[1.9rem]'>{projectsSlides[activeIndex].proj_name}</p>
                     <p className={`${libre_franklin.className} antialiased text-[0.7rem]`}>{projectsSlides[activeIndex].proj_descr}</p>

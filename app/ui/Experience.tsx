@@ -6,7 +6,10 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 const container = {
-    initial: { opacity: 1, scale: 0},
+    initial: { 
+        opacity: 1, 
+        scale: 0,
+    },
     whileInView: {
         opacity: 1,
         scale: 1,
@@ -18,10 +21,10 @@ const container = {
 }
 
 const item  = {
-    initial: { x: 20, opacity: 0},
+    initial: { opacity: 0, x: 20},
     whileInView: {
-        x: 0,
-        opacity: 1
+        opacity: 1,
+        x: 0 
     }
 }
 
@@ -30,7 +33,7 @@ export default function Experience(){
     const [ activeIndex, setActiveIndex ] = useState(1)
 
     return(
-        <section className="mt-20 mx-5 sm:mx-10 border-2 mx-40 border-2 sm:mx-10 lg:mx-20 xl:mx-40" id='experience'>
+        <section className="mt-20 mx-5 sm:mx-10 mx-40 sm:mx-10 lg:mx-20 xl:mx-40" id='experience'>
             <h1 className="font-semibold text-xl xs:text-2xl">Experience</h1>
             <div className='mt-4 flex justify-between flex-col lg:flex-row'>
                 <ul className='w-full flex flex-wrap gap-4 justify-between mb-4 lg:w-[20%] lg:flex-col'>
@@ -45,25 +48,27 @@ export default function Experience(){
                         </li>
                     ))}
                 </ul>
-                <div className='w-full lg:w-[80%]'>
+                <div className='w-full h-[100%] lg:w-[80%]'>
                     <h1 className='font-bold text-[0.9rem] xs:text-[1.2rem]'>{workExperiences[activeIndex].role} @ <span className='text-blue-900'>{workExperiences[activeIndex].organisation}</span></h1>
                     <h2 className='uppercase mt-2 mb-8 text-[0.75rem] text-gray-500 xs:text-[0.9rem]'>{workExperiences[activeIndex].duration}</h2>
-                    <motion.ul 
-                        className='flex flex-col gap-y-4' 
-                        initial="initial"
-                        whileInView="whileInView"
-                        variants={container}
-                        viewport={{once: true}}>
                         {workExperiences[activeIndex].experiences.map((bullet, index) => (
-                            <motion.li key={index} className='flex items-start gap-4' variants={item}>
-                                <div>
-                                    <div className='w-[0.5rem] bg-blue-900 h-[0.5rem] rounded-xl'>
+                            <motion.ul 
+                            className='flex flex-col pb-4' 
+                            initial="initial"
+                            whileInView="whileInView"
+                            variants={container}
+                            viewport={{once: true}}
+                            >
+                                <motion.li key={`bullet-${index}`} className='flex items-start gap-4' variants={item} layout
+                                >
+                                    <div>
+                                        <div className='w-[0.5rem] bg-blue-900 h-[0.5rem] rounded-xl'>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className={`text-[0.9rem] ${libre_franklin.className} antialiased -mt-2 text-justify xs:text-[1.1rem]`}>{bullet}</div>
-                            </motion.li>
+                                    <div className={`text-[0.9rem] ${libre_franklin.className} antialiased -mt-2 text-justify xs:text-[1.1rem]`}>{bullet}</div>
+                                </motion.li>
+                            </motion.ul>
                         ))}
-                    </motion.ul>
                 </div>
             </div>
             

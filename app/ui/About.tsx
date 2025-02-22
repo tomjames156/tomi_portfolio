@@ -24,7 +24,7 @@ const container = {
 export default function About(){
 
     return (
-        <section id="about" className="mx-5 border-2 sm:mx-10 lg:mx-20 xl:mx-40">
+        <section id="about" className="mx-5 sm:mx-10 lg:mx-20 xl:mx-40">
             <h1 className="font-semibold text-xl xs:text-2xl">About Me</h1>
             <div className="flex gap-20 flex-col items-center lg:flex-row lg:items-start">
                 <div className="basis-[80%]">
@@ -46,7 +46,17 @@ export default function About(){
                     <p className={`mt-4 leading-[1.4rem] text-[0.9rem] ${libre_franklin.className} antialiased xs:text-[1.1rem]`}>Outside of studying, I enjoy lifting weights, swimming, listening to music, watching movies and reading fantasy books. </p>
                 </div>
                 <div className="basis-[20%]">
-                    <div>
+                    <motion.div
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{
+                            delay: 0.2, 
+                            type: "spring",
+                            stiffness: 100,
+                            damping: 15
+                        }}
+                        viewport={{once: true}}
+                    >
                         <Image
                             src="/me.jpg"
                             alt='myself'
@@ -54,43 +64,79 @@ export default function About(){
                             height={150}
                             className="rounded-3xl"
                         />
-                    </div>
+                    </motion.div>
                     <div className="flex items-center justify-center gap-4 mt-2 sm:hidden">
-                        <Link
-                            href="mailto:tomjames156@gmail.com"
+                        <motion.div
+                            initial={{opacity: 0, x: -20}}
+                            whileInView={{opacity: 1, x: 0}}
+                            transition={{
+                                delay: 0.2, 
+                                type: "spring",
+                                stiffness: 100,
+                                damping: 15
+                            }}
+                            viewport={{once: true}}
                         >
-                            <Image 
-                                className="hover:-mt-2 transition transition-all duration-200"
-                                src={gmail}
-                                alt='Gmail Logo'
-                                width={25}
-                                height={25}
-                            />
-                        </Link>
-                        <Link 
-                            href="https://github.com/tomjames156/"
-                            target="_blank"
+                            <Link
+                                href="mailto:tomjames156@gmail.com"
+                            >
+                                <Image 
+                                    className="hover:-mt-2 transition transition-all duration-200"
+                                    src={gmail}
+                                    alt='Gmail Logo'
+                                    width={25}
+                                    height={25}
+                                />
+                            </Link>
+                        </motion.div>
+                        <motion.div
+                            initial={{opacity: 0, y: 20}}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{
+                                delay: 0.2, 
+                                type: "spring",
+                                stiffness: 100,
+                                damping: 15
+                            }}
+                            viewport={{once: true}}
                         >
-                            <Image
-                                className="hover:-mt-2 transition transition-all duration-200"
-                                src={github}
-                                alt='Github Logo'
-                                width={20}
-                                height={20}
-                            />
-                        </Link>
-                        <Link 
-                            href="https://www.linkedin.com/in/tomisin-akinwande-981842247/"
-                            target="_blank"
+                            <Link 
+                                href="https://github.com/tomjames156/"
+                                target="_blank"
+                            >
+                                <Image
+                                    className="hover:-mt-2 transition transition-all duration-200"
+                                    src={github}
+                                    alt='Github Logo'
+                                    width={20}
+                                    height={20}
+                                />
+                            </Link>
+                        </motion.div>
+                        <motion.div 
+                            initial={{opacity: 0, x: 20}}
+                            whileInView={{opacity: 1, x: 0}}
+                            transition={{
+                                delay: 0.2, 
+                                type: "spring",
+                                stiffness: 100,
+                                damping: 15
+                            }}
+                            viewport={{once: true}}
                         >
-                            <Image
-                                className="hover:-mt-2 transition transition-all duration-200"
-                                src={linkedin}
-                                alt='Linkedin logo'
-                                width={18}
-                                height={18}
-                            />
-                        </Link>
+                            <Link 
+                                href="https://www.linkedin.com/in/tomisin-akinwande-981842247/"
+                                target="_blank"
+                            >
+                                <Image
+                                    className="hover:-mt-2 transition transition-all duration-200"
+                                    src={linkedin}
+                                    alt='Linkedin logo'
+                                    width={18}
+                                    height={18}
+                                />
+                            </Link>
+                        </motion.div>
                     </div>
                 </div>
             </div>
