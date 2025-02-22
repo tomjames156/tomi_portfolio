@@ -126,9 +126,9 @@ export default function Projects(){
             </div>
             <div className='w-full flex justify-center lg:hidden'>
                 <div className='flex flex-col gap-y-1 text-center bg-blue-900 text-white pt-4 pb-2 px-2 w-full mt-4 rounded-xl xs:pt-8 xs:pb-4 xs:px-5 xs:gap-y-2 2xs:w-[95%] xs:max-w-[38rem] xs:px-20'>
-                    <p className='text-[1rem] font-medium sm:text-[1.9rem]'>{projectsSlides[activeIndex].proj_name}</p>
-                    <p className={`${libre_franklin.className} antialiased text-[0.7rem]`}>{projectsSlides[activeIndex].proj_descr}</p>
-                    <p className='font-bold text-[0.65rem] sm:text-[1rem]'>{listItems(projectsSlides[activeIndex].tech_used)}</p>
+                    <p className='text-[1rem] font-medium xs:text-[1.1rem] sm:text-[1.9rem]'>{projectsSlides[activeIndex].proj_name}</p>
+                    <p className={`${libre_franklin.className} antialiased text-[0.7rem] xs:text-[0.9rem]`}>{projectsSlides[activeIndex].proj_descr}</p>
+                    <p className='font-bold text-[0.65rem] xs:text-[0.75rem] sm:text-[1rem]'>{listItems(projectsSlides[activeIndex].tech_used)}</p>
                     <div className='flex gap-x-2 justify-center'>
                         {projectsSlides[activeIndex].github_link && <Link 
                             href={projectsSlides[activeIndex].github_link}
