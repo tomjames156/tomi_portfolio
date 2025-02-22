@@ -65,8 +65,15 @@ export default function Projects(){
 
     return (
         <section className="mx-5 mt-20 sm:mx-10 lg:mx-20 xl:mx-40 xl:mt-40" id="projects">
-            <h1 className="font-semibold text-xl xs:text-2xl">Projects</h1>
-            <div className='mt-12 relative w-full h-fit overflow-hidden'>
+            <h1 className="font-semibold text-[1.4rem] xs:text-2xl">Projects</h1>
+            <motion.div className='mt-12 relative w-full h-fit 
+            overflow-hidden'
+            initial={{opacity: 1, scale: 0.95}}
+                    whileInView={{opacity: 1, scale: 1}}
+                    transition={{delay: 0.1}}
+                    viewport={{once: true, amount: 1}}
+                    layout
+            >
                 <div
                     className='flex transition transition-all ease duration-200 object-contain relative'
                     style={{
@@ -124,12 +131,12 @@ export default function Projects(){
                 -translate-y-1/2 material-symbols-rounded text-[2.5rem] cursor-pointer hover:-right-2 hover:scale-[1.1] transition-transform duration-200 xs:-right-2 xs:text-[6rem] xs:hover:-right-4 xs:hover:scale-[1.15]' onClick={nextProject}>
                     chevron_right
                 </div>
-            </div>
+            </motion.div>
             <div className='w-full flex justify-center lg:hidden'>
                 <div className='flex flex-col gap-y-1 text-center bg-blue-900 text-white pt-4 pb-2 px-2 w-full mt-4 rounded-xl xs:pt-8 xs:pb-4 xs:px-5 xs:gap-y-2 2xs:w-[95%] xs:max-w-[38rem] xs:px-20'>
-                    <p className='text-[1rem] font-medium xs:text-[1.1rem] sm:text-[1.9rem]'>{projectsSlides[activeIndex].proj_name}</p>
-                    <p className={`${libre_franklin.className} antialiased text-[0.7rem] xs:text-[0.9rem]`}>{projectsSlides[activeIndex].proj_descr}</p>
-                    <p className='font-bold text-[0.65rem] xs:text-[0.75rem] sm:text-[1rem]'>{listItems(projectsSlides[activeIndex].tech_used)}</p>
+                    <p className='text-[1.1rem] font-medium sm:text-[1.9rem]'>{projectsSlides[activeIndex].proj_name}</p>
+                    <p className={`${libre_franklin.className} antialiased text-[0.85rem] xs:text-[0.9rem]`}>{projectsSlides[activeIndex].proj_descr}</p>
+                    <p className='font-bold text-[0.75rem] xs:text-[0.75rem] sm:text-[1rem]'>{listItems(projectsSlides[activeIndex].tech_used)}</p>
                     <div className='flex gap-x-2 justify-center'>
                         {projectsSlides[activeIndex].github_link && <Link 
                             href={projectsSlides[activeIndex].github_link}
@@ -170,7 +177,7 @@ export default function Projects(){
                 variants={container}
                 initial='initial'
                 whileInView="whileInView"
-                viewport={{once: true}}>
+                viewport={{amount: 0.2, once: true}}>
                 {projectTiles.map((project, index) => {
                     return (
                     <motion.li 
@@ -210,8 +217,8 @@ export default function Projects(){
                             </Link>}
                         </div>
                         <p className='font-bold text-lg mt-6'>{project.proj_name}</p>
-                        <p className={`${libre_franklin.className} antialiased text-[0.9rem] leading-[1.3rem] mt-6 mb-12 xs:text-[1rem]`}>{project.proj_descr}</p>
-                        <p className='text-[0.8rem] xs:text-sm'>{listItems(project.tech_used)}</p>
+                        <p className={`${libre_franklin.className} antialiased text-[1rem] leading-[1.3rem] mt-6 mb-12 xs:text-[1rem]`}>{project.proj_descr}</p>
+                        <p className='text-[0.9rem] xs:text-sm'>{listItems(project.tech_used)}</p>
                     </motion.li>)
                 }) }
             </motion.ul>

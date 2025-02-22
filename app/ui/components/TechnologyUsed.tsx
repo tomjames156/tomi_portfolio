@@ -17,7 +17,7 @@ export default function TechnologyUsed({technology}: TechnologyUsedProps){
         <motion.div className='flex items-center gap-3 xxs:pl-3' variants={item}>
             <div className='w-[0.5rem] bg-blue-900 h-[0.5rem] rounded-xl'>
             </div>
-            <div className='font-medium text-[0.8rem] xs:text-[1.1rem]'>{technology}</div>
+            <div className='font-medium text-[1rem] xs:text-[1.1rem]'>{technology}</div>
         </motion.div>
     )
 }
