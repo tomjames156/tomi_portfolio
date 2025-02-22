@@ -177,7 +177,7 @@ export default function Projects(){
                 variants={container}
                 initial='initial'
                 whileInView="whileInView"
-                viewport={{amount: 0.2, once: true}}>
+                viewport={{amount: 0.1, once: true}}>
                 {projectTiles.map((project, index) => {
                     return (
                     <motion.li 
