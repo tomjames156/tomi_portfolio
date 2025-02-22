@@ -52,12 +52,13 @@ export default function Experience(){
                     <h1 className='font-bold text-[0.9rem] xs:text-[1.2rem]'>{workExperiences[activeIndex].role} @ <span className='text-blue-900'>{workExperiences[activeIndex].organisation}</span></h1>
                     <h2 className='uppercase mt-2 mb-8 text-[0.75rem] text-gray-500 xs:text-[0.9rem]'>{workExperiences[activeIndex].duration}</h2>
                         {workExperiences[activeIndex].experiences.map((bullet, index) => (
-                            <motion.ul 
-                            className='flex flex-col pb-4' 
-                            initial="initial"
-                            whileInView="whileInView"
-                            variants={container}
-                            viewport={{once: true}}
+                            <motion.ul
+                                key={activeIndex} 
+                                className='flex flex-col pb-4' 
+                                initial="initial"
+                                whileInView="whileInView"
+                                variants={container}
+                                viewport={{once: true}}
                             >
                                 <motion.li key={`bullet-${index}`} className='flex items-start gap-4' variants={item} layout
                                 >

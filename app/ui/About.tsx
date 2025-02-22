@@ -28,7 +28,7 @@ export default function About(){
             <h1 className="font-semibold text-xl xs:text-2xl">About Me</h1>
             <div className="flex gap-20 flex-col items-center lg:flex-row lg:items-start">
                 <div className="basis-[80%]">
-                    <p className={`mt-4 leading-[1.4rem] text-[0.9rem] ${libre_franklin.className} antialiased xs:text-[1.1rem]`}>I am currently studying for a Bachelor's of Science in Software engineering student at Nile University of Nigeria, Abuja. At the same time, I'm working towards a career in Data Science through learning from resources online.</p>
+                    <p className={`mt-4 leading-[1.4rem] text-[0.9rem] ${libre_franklin.className} antialiased xs:text-[1.1rem]`}>I am currently studying for a Bachelor&apos;s of Science in Software engineering student at Nile University of Nigeria, Abuja. At the same time, I&apos;m working towards a career in Data Science through learning from resources online.</p>
                     <p className={`mt-4 leading-[1.4rem] text-[0.9rem] ${libre_franklin.className} antialiased xs:text-[1.1rem]`}>Here are some technologies I’ve worked with:</p>
                     <motion.ul 
                         className="w-[50%] mt-5 grid grid-cols-1 xxs:grid-cols-2"
