@@ -53,7 +53,7 @@ export default function Experience(){
                     <h2 className='uppercase mt-2 mb-8 text-[0.75rem] text-gray-500 xs:text-[0.9rem]'>{workExperiences[activeIndex].duration}</h2>
                         {workExperiences[activeIndex].experiences.map((bullet, index) => (
                             <motion.ul
-                                key={activeIndex} 
+                                key='none' 
                                 className='flex flex-col pb-4' 
                                 initial="initial"
                                 whileInView="whileInView"
