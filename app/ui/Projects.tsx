@@ -173,7 +173,7 @@ export default function Projects(){
                 })}
             </div>
             <motion.ul 
-                className='grid grid-cols-1 gap-x-4 gap-y-6 px-2 2xs:px-10 xs:grid-cols-2 xs:px-0 sm:px-10 sm:grid-cols-2 sm:justify-between lg:grid-cols-3 xl:px-24'
+                className='grid grid-cols-1 gap-x-4 gap-y-6 px-2 2xs:px-10 xs:grid-cols-2 xs:px-0 sm:px-10 sm:grid-cols-2 sm:justify-between lg:grid-cols-3 xl:px-24 dark:text-white'
                 variants={container}
                 initial='initial'
                 whileInView="whileInView"
@@ -182,7 +182,7 @@ export default function Projects(){
                     return (
                     <motion.li 
                         key={index} 
-                        className='border-[1px] border-solid border-black rounded-xl py-5 px-4 flex flex-col cursor-default hover:-mt-2 hover:border-blue-900 hover:border-[3px] transition transition-all duration-200' 
+                        className='border-[1px] border-solid border-black rounded-xl py-5 px-4 flex flex-col cursor-default hover:-mt-2 hover:border-blue-900 hover:border-[3px] transition transition-all duration-200 dark:border-white' 
                         variants={item}
                         transition={{
                             type: "spring",
@@ -201,6 +201,7 @@ export default function Projects(){
                                     width={20}
                                     height={15}
                                     alt='Github Logo'
+                                    className='dark:bg-white dark:rounded-xl'
                                 />
                             </Link>}
                             {project.live_site && <Link
@@ -213,6 +214,7 @@ export default function Projects(){
                                     width={18}
                                     height={15}
                                     alt='Earth Globe Blue'
+                                    className='dark:bg-white dark:rounded-xl'
                                 />
                             </Link>}
                         </div>

@@ -24,7 +24,7 @@ const container = {
 export default function About(){
 
     return (
-        <section id="about" className="mx-5 sm:mx-10 lg:mx-20 xl:mx-40">
+        <section id="about" className="mx-5 sm:mx-10 lg:mx-20 xl:mx-40 dark:text-white">
             <h1 className="font-semibold text-[1.4rem] xs:text-2xl">About Me</h1>
             <div className="flex gap-20 flex-col items-center lg:flex-row lg:items-start">
                 <div className="basis-[80%]">
@@ -47,6 +47,7 @@ export default function About(){
                 </div>
                 <div className="basis-[20%]">
                     <motion.div
+                        layout
                         initial={{opacity: 0, y: 20}}
                         whileInView={{opacity: 1, y: 0}}
                         transition={{
@@ -65,7 +66,7 @@ export default function About(){
                             className="rounded-3xl"
                         />
                     </motion.div>
-                    <div className="flex items-center justify-center gap-4 mt-2 sm:hidden">
+                    <div className="flex items-center justify-center gap-4 mt-2 h-fit sm:hidden">
                         <motion.div
                             initial={{opacity: 0, x: -20}}
                             whileInView={{opacity: 1, x: 0}}
@@ -81,7 +82,7 @@ export default function About(){
                                 href="mailto:tomjames156@gmail.com"
                             >
                                 <Image 
-                                    className="hover:-mt-2 transition transition-all duration-200"
+                                    className="rounded-md hover:-mt-2 transition transition-all duration-200"
                                     src={gmail}
                                     alt='Gmail Logo'
                                     width={25}
@@ -105,7 +106,7 @@ export default function About(){
                                 target="_blank"
                             >
                                 <Image
-                                    className="hover:-mt-2 transition transition-all duration-200"
+                                    className="hover:-mt-2 transition transition-all duration-200 dark:bg-white dark:rounded-xl"
                                     src={github}
                                     alt='Github Logo'
                                     width={20}
