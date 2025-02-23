@@ -65,7 +65,7 @@ export default function Projects(){
 
     return (
         <section className="mx-5 mt-20 sm:mx-10 lg:mx-20 xl:mx-40 xl:mt-40" id="projects">
-            <h1 className="font-semibold text-[1.4rem] xs:text-2xl">Projects</h1>
+            <h1 className="font-semibold text-[1.4rem] xs:text-2xl dark:text-white">Projects</h1>
             <motion.div className='mt-12 relative w-full h-fit 
             overflow-hidden'
             initial={{opacity: 1, scale: 0.95}}
