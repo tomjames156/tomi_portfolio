@@ -53,7 +53,7 @@ export default function Navbar(){
             </div>
             <div className="flex-2 flex gap-2 fold:gap-4 2xs:gap-6 xs:gap-12">
                 <Link href='#about' className="text-[0.9rem]
-                text-white font-medium hover:font-bold transition transition-all duration-200 2xs:text-[0.9rem] xs:text-[1rem]">About</Link>
+                dark:text-white font-medium hover:font-bold transition transition-all duration-200 2xs:text-[0.9rem] xs:text-[1rem]">About</Link>
                 <Link href='#projects' className="text-[0.9rem] font-medium hover:font-bold transition transition-all duration-200 2xs:text-[0.9rem] xs:text-[1rem]">Projects</Link>
                 <Link href='#experience' className="text-[0.9rem] font-medium hover:font-bold transition transition-all duration-200 2xs:text-[0.9rem] xs:text-[1rem]">Experience</Link>
             </div>
