@@ -59,7 +59,7 @@ export default function About(){
                         viewport={{once: true}}
                     >
                         <Image
-                            src="/me.png"
+                            src="/me.jpeg"
                             alt='myself'
                             width={300}
                             height={150}
