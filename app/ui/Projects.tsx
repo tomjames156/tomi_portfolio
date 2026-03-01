@@ -219,7 +219,7 @@ export default function Projects(){
                             </Link>}
                         </div>
                         <p className='font-bold text-lg mt-6'>{project.proj_name}</p>
-                        <p className={`${libre_franklin.className} antialiased text-[1rem] leading-[1.3rem] mt-6 mb-12 xs:text-[1rem]`}>{project.proj_descr}</p>
+                        <p className={`${libre_franklin.className} antialiased text-[1rem] leading-[1.3rem] mt-6 mb-12 xs:text-[1rem] text-justify`} >{project.proj_descr}</p>
                         <p className='text-[0.9rem] xs:text-sm'>{listItems(project.tech_used)}</p>
                     </motion.li>)
                 }) }
