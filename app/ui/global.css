@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@theme{
-  --breakpoint-xs: 30rem;
-}
-
 *{
   scroll-behavior: smooth;
   scroll-padding: 4rem;
