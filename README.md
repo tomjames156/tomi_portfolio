@@ -1,2 +1,2 @@
 # tomi_portfolio
-My portfolio with an updated user interface
+My development portfolio with an updated user interface
