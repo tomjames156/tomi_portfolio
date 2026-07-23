@@ -5,6 +5,7 @@ import Hero from './ui/Hero'
 import About from './ui/About'
 import Experience from './ui/Experience'
 import Projects from './ui/Projects'
+import Contact from './ui/Contact'
 import Footer from './ui/components/Footer'
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <About/>
       <Experience/>
       <Projects/>
+      <Contact/>
       <Footer/>
     </>
   )

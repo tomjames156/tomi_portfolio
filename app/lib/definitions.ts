@@ -24,3 +24,10 @@ export type ProjectTile = {
     github_link?: string,
     live_site?: string
 }
+
+export type ContactMedium = {
+    contact_medium: string,
+    main_text: string,
+    sub_text: string,
+    link:  string;
+}

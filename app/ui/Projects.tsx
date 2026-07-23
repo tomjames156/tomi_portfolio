@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import gitLogoBlue from "../../public/git-blue.png"
 import earthBlue from "../../public/earth-blue.png"
+import { LuArrowRight } from 'react-icons/lu'
 import { projectsSlides, projectTiles } from '../lib/placeholder-data'
 import Image from 'next/image'
 
@@ -66,7 +67,11 @@ export default function Projects(){
     return (
         <section className="mx-5 mt-20 sm:mx-10 lg:mx-20 xl:mx-40 xl:mt-40" id="projects">
             <h1 className="font-semibold text-[1.4rem] xs:text-2xl dark:text-white">Projects</h1>
-            <motion.div className='mt-12 relative w-full h-fit 
+            <div className='mt-8 w-full flex justify-end transition transition-all duration-200'>
+                <Link className='flex text-right text-sm items-center gap-2 hover:text-blue-900 hover:ml-2 hover:-mr-2 hover:font-medium dark:hover:text-blue-400 dark:text-white w-fit' href='https://github.com/tomjames156' target='_blank'>View All Projects <LuArrowRight/></Link>
+                
+            </div>
+            <motion.div className='mt-3 relative w-full h-fit 
             overflow-hidden'
             initial={{opacity: 1, scale: 0.95}}
                     whileInView={{opacity: 1, scale: 1}}
@@ -94,9 +99,9 @@ export default function Projects(){
                     })}
                 </div>
                 <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-y-2 text-center bg-blue-900 text-white pt-8 pb-4 px-20 w-[38rem] rounded-xl hidden lg:flex'>
-                    <p className='text-[1.9rem] font-medium'>{projectsSlides[activeIndex].proj_name}</p>
+                    <p className='text-[1.9rem] font-bold'>{projectsSlides[activeIndex].proj_name}</p>
                     <p className={`${libre_franklin.className} antialiased`}>{projectsSlides[activeIndex].proj_descr}</p>
-                    <p className='font-bold text-[0.9rem]'>{listItems(projectsSlides[activeIndex].tech_used)}</p>
+                    <p className='font-medium text-[0.9rem] '>{listItems(projectsSlides[activeIndex].tech_used)}</p>
                     <div className='flex gap-x-2 justify-center'>
                         {projectsSlides[activeIndex].github_link && <Link 
                             href={projectsSlides[activeIndex].github_link}
@@ -124,20 +129,20 @@ export default function Projects(){
                         </Link>}
                     </div>
                 </div>
-                <div className='absolute top-1/2 -left-1 -translate-y-1/2 material-symbols-rounded text-[2.5rem] cursor-pointer hover:-left-2 hover:scale-[1.1] transition-transform duration-200 xs:-left-2 xs:text-[6rem] xs:hover:-left-4 xs:hover:scale-[1.15]' onClick={prevProject}>
+                <div className='absolute top-1/2 -left-1 -translate-y-1/2 material-symbols-rounded text-[2.5rem] cursor-pointer hover:-left-2 hover:text-[#343434] hover:scale-[1.1] transition-transform duration-200 xs:-left-2 xs:text-[6rem] xs:hover:-left-4 xs:hover:scale-[1.15]' onClick={prevProject}>
                     chevron_left
                 </div>
                 <div className='absolute top-1/2 -right-1
-                -translate-y-1/2 material-symbols-rounded text-[2.5rem] cursor-pointer hover:-right-2 hover:scale-[1.1] transition-transform duration-200 xs:-right-2 xs:text-[6rem] xs:hover:-right-4 xs:hover:scale-[1.15]' onClick={nextProject}>
+                -translate-y-1/2 material-symbols-rounded text-[2.5rem] cursor-pointer hover:-right-2 hover:text-[#343434] hover:scale-[1.1] transition-transform duration-200 xs:-right-2 xs:text-[6rem] xs:hover:-right-4 xs:hover:scale-[1.15]' onClick={nextProject}>
                     chevron_right
                 </div>
             </motion.div>
             <div className='w-full flex justify-center lg:hidden'>
                 <div className='flex flex-col gap-y-1 text-center bg-blue-900 text-white pt-4 pb-2 px-2 w-full mt-4 rounded-xl xs:pt-8 xs:pb-4 xs:px-5 xs:gap-y-2 2xs:w-[95%] xs:max-w-[38rem] xs:px-20'>
-                    <p className='text-[1.1rem] font-medium sm:text-[1.9rem]'>{projectsSlides[activeIndex].proj_name}</p>
+                    <p className='text-[1.1rem] font-bold sm:text-[1.9rem]'>{projectsSlides[activeIndex].proj_name}</p>
                     <p className={`${libre_franklin.className} antialiased text-[0.85rem] xs:text-[0.9rem]`}>{projectsSlides[activeIndex].proj_descr}</p>
-                    <p className='font-bold text-[0.75rem] xs:text-[0.75rem] sm:text-[1rem]'>{listItems(projectsSlides[activeIndex].tech_used)}</p>
-                    <div className='flex gap-x-2 justify-center'>
+                    <p className='text-[0.75rem] xs:text-[0.75rem] sm:text-[1rem]'>{listItems(projectsSlides[activeIndex].tech_used)}</p>
+                    <div className='flex gap-x-2 items-center justify-center'>
                         {projectsSlides[activeIndex].github_link && <Link 
                             href={projectsSlides[activeIndex].github_link}
                             target='_blank'
@@ -168,7 +173,7 @@ export default function Projects(){
             <div className='w-full h-16 flex items-center justify-center gap-x-4'>
                 {projectsSlides && projectsSlides.map((project, index) => {
                     return (index != activeIndex ? <div key={index} className="w-8 h-[0.275rem] bg-[#D9D9D9] cursor-pointer hover:bg-gray-400 transition transition-all duration-100 2xs:w-12" onClick={() => {setActiveIndex(index)}}></div> :
-                        <div key={index} className="w-8 h-[0.275rem] bg-blue-900 cursor-pointer 2xs:w-12" onClick={() => {setActiveIndex(index)}}></div>
+                        <div key={index} className="w-8 h-[0.275rem] bg-blue-900 dark:bg-blue-400 cursor-pointer 2xs:w-12" onClick={() => {setActiveIndex(index)}}></div>
                     )
                 })}
             </div>
@@ -182,7 +187,7 @@ export default function Projects(){
                     return (
                     <motion.li 
                         key={index} 
-                        className='border-[1px] border-solid border-black rounded-xl py-5 px-4 flex flex-col cursor-default hover:-mt-2 hover:border-blue-900 hover:border-[3px] transition transition-all duration-200 dark:border-white' 
+                        className='border-[1px] group border-solid border-black rounded-xl py-5 px-4 flex flex-col cursor-default hover:mb-4 hover:-mt-4 hover:border-blue-900 transition transition-all duration-200 dark:border-white dark:hover:border-blue-400' 
                         variants={item}
                         transition={{
                             type: "spring",
@@ -218,7 +223,7 @@ export default function Projects(){
                                 />
                             </Link>}
                         </div>
-                        <p className='font-bold text-lg mt-6'>{project.proj_name}</p>
+                        <p className='font-bold text-lg mt-6 group-hover:text-blue-900 dark:group-hover:text-blue-400'>{project.proj_name}</p>
                         <p className={`${libre_franklin.className} antialiased text-[1rem] leading-[1.3rem] mt-6 mb-12 xs:text-[1rem] text-justify`} >{project.proj_descr}</p>
                         <p className='text-[0.9rem] xs:text-sm'>{listItems(project.tech_used)}</p>
                     </motion.li>)

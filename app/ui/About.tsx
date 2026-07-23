@@ -28,7 +28,7 @@ export default function About(){
             <h1 className="font-semibold text-[1.4rem] xs:text-2xl">About Me</h1>
             <div className="flex gap-20 flex-col items-center lg:flex-row lg:items-start">
                 <div className="basis-[80%]">
-                    <p className={`mt-2 leading-[1.4rem] text-[1rem] ${libre_franklin.className} antialiased xs:text-[1.1rem] sm:mt-4`}>I am currently studying for a Bachelor&apos;s of Science in Software engineering student at Nile University of Nigeria, Abuja. At the same time, I&apos;m working towards a career in Data Science through learning from resources online.</p>
+                    <p className={`mt-2 leading-[1.4rem] text-[1rem] ${libre_franklin.className} antialiased xs:text-[1.1rem] sm:mt-4`}>I'm a software engineer with 4+ years of experience building scalable software and data analytics solutions across various domains, including AdTech, e-governance, solar energy, utility management.</p>
                     <p className={`mt-4 leading-[1.4rem] text-[1rem] ${libre_franklin.className} antialiased xs:text-[1.1rem]`}>Here are some technologies I’ve worked with:</p>
                     <motion.ul 
                         className="w-[50%] mt-5 grid grid-cols-1 xxs:grid-cols-2"
@@ -42,8 +42,10 @@ export default function About(){
                         <TechnologyUsed technology="Django"/>
                         <TechnologyUsed technology="React"/>
                         <TechnologyUsed technology="JavaScript"/>
+                        <TechnologyUsed technology="AWS"/>
+                        <TechnologyUsed technology="Gemini API"/>
                     </motion.ul>
-                    <p className={`mt-4 leading-[1.4rem] text-[1rem] ${libre_franklin.className} antialiased xs:text-[1.1rem]`}>Outside of studying, I enjoy lifting weights, swimming, listening to music, watching movies and reading fantasy books. </p>
+                    <p className={`mt-4 leading-[1.4rem] text-[1rem] ${libre_franklin.className} antialiased xs:text-[1.1rem]`}>Outside of programming, I enjoy listening to music, reading and I'm also a seasoned gym bro 💪🏾</p>
                 </div>
                 <div className="basis-[20%]">
                     <motion.div

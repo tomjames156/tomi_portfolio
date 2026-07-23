@@ -35,7 +35,7 @@ export default function Experience(){
     return(
         <section className="mt-20 mx-5 sm:mx-10 mx-40 sm:mx-10 lg:mx-20 xl:mx-40 dark:text-white" id='experience'>
             <h1 className="font-semibold text-[1.4rem] xs:text-2xl">Experience</h1>
-            <div className='mt-4 flex justify-between flex-col lg:flex-row'>
+            <div className='mt-6 flex justify-between flex-col lg:flex-row'>
                 <ul className='w-full flex flex-wrap gap-4 justify-between mb-4 lg:w-[20%] lg:flex-col'>
                     {workExperiences.map((exp, index) => (
                         index !==  activeIndex?
@@ -45,7 +45,7 @@ export default function Experience(){
                         </li> :
                         <li key={exp.exp_id} className='flex justify-between pr-10'>
                             <p className='uppercase text-[0.9rem] font-bold text-blue-900 border-b-[4px] border-[#0038BC] lg:border-none xs:text-[1rem] dark:text-blue-400 dark:border-blue-400'>{exp.organisation}</p>
-                            <div className='w-[4px] h-full bg-[#0038BC] hidden lg:block'></div>
+                            <div className='w-[4px] h-full bg-[#0038BC] hidden lg:block dark:bg-blue-400'></div>
                         </li>
                     ))}
                 </ul>
@@ -64,7 +64,7 @@ export default function Experience(){
                                 <motion.li key={`bullet-${index}`} className='flex items-start gap-4' variants={item} layout
                                 >
                                     <div>
-                                        <div className='w-[0.5rem] bg-blue-900 h-[0.5rem] rounded-xl dark:bg-blue-400'>
+                                        <div className='w-[0.5rem] bg-blue-900 h-[0.5rem] rounded-xl dark:bg-blue-600'>
                                         </div>
                                     </div>
                                     <div className={`text-[1rem] ${libre_franklin.className} antialiased -mt-2 text-justify xs:text-[1.1rem]`}>{bullet}</div>
