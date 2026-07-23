@@ -1,6 +1,5 @@
 'use client'
 
-import React, { ChangeEvent, FormEvent, useState } from "react"
 import { contactMediums } from "../lib/placeholder-data"
 import x from "../../public/x.png"
 import github from "../../public/github-logo.png"
@@ -10,21 +9,6 @@ import Image from "next/image"
 import ContactItem from "./components/ContactItem"
 
 export default function Contact() {
-
-    const [form, setForm] = useState({})
-
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target
-        setForm({
-            ...form, 
-            [name]: value
-        })
-    }
-
-    const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        console.log("goosebumps")
-    }
 
     return (
         <section id="contact" className="mt-20 mx-5 sm:mx-10 lg:mx-20 xl:mx-40 dark:text-white">
