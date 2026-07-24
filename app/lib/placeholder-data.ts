@@ -124,7 +124,7 @@ export const contactMediums: ContactMedium[] = [
         contact_medium: 'WhatsApp',
         main_text: 'Send a chat on WhatsApp',
         sub_text: 'Fastest reply, typically within hours',
-        link:  'https://wa.me/+234708293037'
+        link:  'https://wa.me/+2347068293037'
     },
     {
         contact_medium: 'Send an Email',
