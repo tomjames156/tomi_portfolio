@@ -13,7 +13,7 @@ export default function Contact() {
     return (
         <section id="contact" className="mt-20 mx-5 sm:mx-10 lg:mx-20 xl:mx-40 dark:text-white">
                 <h1 className="font-semibold text-[1.4rem] xs:text-2xl">Contact Me</h1>
-                <p className="mt-4 mb-4">You can reach out to me via any of these platforms.</p>
+                <p className="mt-4 mb-4">Feel free to reach out to me via any of these platforms.</p>
                 <div className="flex flex-col gap-4 xs:flex-row xs:gap-10">{
                     contactMediums.map((medium, index) => ( 
                         <ContactItem key={index} contact_medium={medium.contact_medium} link={medium.link} sub_text={medium.sub_text} main_text={medium.main_text} />

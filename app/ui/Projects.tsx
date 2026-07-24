@@ -93,12 +93,12 @@ export default function Projects(){
                                 alt={`${proj.proj_name} project screenshot`}
                                 width={50000}
                                 height={100}
-                                className='border-[1px] border-solid border-black blur-[2px] rounded-2xl w-[100%] h-[auto]'
+                                className='border-[1px] border-solid border-black grayscale-50 rounded-2xl w-[100%] h-[auto]'
                             />
                         )
                     })}
                 </div>
-                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-y-2 text-center bg-blue-900 text-white pt-8 pb-4 px-20 w-[38rem] rounded-xl hidden lg:flex'>
+                <div className='absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-y-2 text-center bg-blue-900 text-white pt-8 pb-4 px-20 w-[38rem] rounded-xl hidden lg:flex'>
                     <p className='text-[1.9rem] font-bold'>{projectsSlides[activeIndex].proj_name}</p>
                     <p className={`${libre_franklin.className} antialiased text-justify`}>{projectsSlides[activeIndex].proj_descr}</p>
                     <p className='font-medium text-[0.9rem] '>{listItems(projectsSlides[activeIndex].tech_used)}</p>
