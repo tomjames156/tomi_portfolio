@@ -56,7 +56,7 @@ export const projectsSlides: ProjectSlide[] = [
         proj_id: 0,
         proj_img: "/power-reach.png",
         proj_name: 'PowerReach',
-        proj_descr: "PowerReach is a centralized web-based platform bridging the gap between Nigerian electricity consumers and DisCos",
+        proj_descr: "PowerReach is a centralized web-based platform bridging the gap between Nigerian electricity consumers and DisCos.",
         tech_used: ["FastAPI", "ReactJS", "Gemini API", "PostgreSQL"],
         live_site: "https://powerreach-stay-connected.vercel.app/"
     },
@@ -64,7 +64,7 @@ export const projectsSlides: ProjectSlide[] = [
         proj_id: 1,
         proj_img: "/skillskulpt.png",
         proj_name: 'SkillSkulpt',
-        proj_descr: "An AI-powered personalized art learning platform that helps artists improve their skills through adaptive exercises, real-time feedback, and progress tracking",
+        proj_descr: "An AI-powered personalized art learning platform that helps artists improve their skills through adaptive exercises, real-time feedback, and progress tracking.",
         tech_used: ["AWS Lambda", "Claude", "Dynamo DB", "React JS"],
         live_site: "https://main.d3dipkd8a1thf9.amplifyapp.com/"
     },
@@ -80,7 +80,7 @@ export const projectsSlides: ProjectSlide[] = [
         proj_id: 3,
         proj_img: "/habstrack.png",
         proj_name: 'HabStrack',
-        proj_descr: "A web-based habit tracker application supercharged with AI for habit stacking and progression insights over time",
+        proj_descr: "A web-based habit tracker application supercharged with AI for habit stacking and progression insights over time.",
         tech_used: ["ReactJS", "AWS Lambda", "Claude", "Dynamo DB"],
         github_link: "https://github.com/tomjames156/HabStrack",
         live_site: "https://main.d19maocf46nn2u.amplifyapp.com/"
@@ -90,6 +90,13 @@ export const projectsSlides: ProjectSlide[] = [
 export const projectTiles: ProjectTile[] = [
     {
         proj_id: 0,
+        proj_name: 'Global Rate Limiter',
+        proj_descr: "A highly available global rate limiter as a service that uses the sliding window counter rate limiting algorithm.",
+        tech_used: ["Python", "Redis", "Docker", "FastAPI"],
+        live_site: "https://github.com/tomjames156/Global-Rate-Limiter.git"
+    },
+    {
+        proj_id: 1,
         proj_name: 'Tourify',
         proj_descr: "A web application that helps tourists discover exciting locations within Abuja.",
         tech_used: ["ReactJS", "Firebase", "SCSS"],
@@ -97,18 +104,11 @@ export const projectTiles: ProjectTile[] = [
         live_site: "https://tourify-iota.vercel.app/"
     },
     {
-        proj_id: 1,
+        proj_id: 2,
         proj_name: 'Medbolt',
         proj_descr: "The landing page website for a Nigerian AI assisted healthcare tech startup.",
         tech_used: ["ReactJS", "SCSS"],
         live_site: "https://medbolt-website.vercel.app/"
-    },
-    {
-        proj_id: 2,
-        proj_name: 'Student Depression Analysis',
-        proj_descr: "Exploratory Data Analysis on data about students mental health and sleep habits at different education levels.",
-        tech_used: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-        live_site: "https://www.kaggle.com/code/akinwandetomisin/student-depression-exploratory-data-analysis"
     },
     {
         proj_id: 3,

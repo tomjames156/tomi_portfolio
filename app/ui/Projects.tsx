@@ -100,7 +100,7 @@ export default function Projects(){
                 </div>
                 <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-y-2 text-center bg-blue-900 text-white pt-8 pb-4 px-20 w-[38rem] rounded-xl hidden lg:flex'>
                     <p className='text-[1.9rem] font-bold'>{projectsSlides[activeIndex].proj_name}</p>
-                    <p className={`${libre_franklin.className} antialiased`}>{projectsSlides[activeIndex].proj_descr}</p>
+                    <p className={`${libre_franklin.className} antialiased text-justify`}>{projectsSlides[activeIndex].proj_descr}</p>
                     <p className='font-medium text-[0.9rem] '>{listItems(projectsSlides[activeIndex].tech_used)}</p>
                     <div className='flex gap-x-2 justify-center'>
                         {projectsSlides[activeIndex].github_link && <Link 
@@ -140,7 +140,7 @@ export default function Projects(){
             <div className='w-full flex justify-center lg:hidden'>
                 <div className='flex flex-col gap-y-1 text-center bg-blue-900 text-white pt-4 pb-2 px-2 w-full mt-4 rounded-xl xs:pt-8 xs:pb-4 xs:px-5 xs:gap-y-2 2xs:w-[95%] xs:max-w-[38rem] xs:px-20'>
                     <p className='text-[1.1rem] font-bold sm:text-[1.9rem]'>{projectsSlides[activeIndex].proj_name}</p>
-                    <p className={`${libre_franklin.className} antialiased text-[0.85rem] xs:text-[0.9rem]`}>{projectsSlides[activeIndex].proj_descr}</p>
+                    <p className={`${libre_franklin.className} antialiased text-[0.85rem] text-justify xs:text-[0.9rem]`}>{projectsSlides[activeIndex].proj_descr}</p>
                     <p className='text-[0.75rem] xs:text-[0.75rem] sm:text-[1rem]'>{listItems(projectsSlides[activeIndex].tech_used)}</p>
                     <div className='flex gap-x-2 items-center justify-center'>
                         {projectsSlides[activeIndex].github_link && <Link 
