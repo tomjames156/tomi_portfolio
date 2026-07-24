@@ -1,4 +1,5 @@
 import { libre_franklin } from './fonts'
+import { LuAppWindow, LuFileText } from 'react-icons/lu'
 import Link from 'next/link'
 
 export default function Hero(){
@@ -9,23 +10,16 @@ export default function Hero(){
                 <h1 className='text-[1.75rem] mt-10 font-bold xs:text-3xl sm:text-4xl'>Hi there, I’m Tomisin</h1>
                 <h3 className='text-[1.3rem] mt-1 font-medium sm:text-2xl sm:mt-4'>I love writing code</h3>
                 <p className={`mt-1 leading-[1.3rem] text-[1rem] ${libre_franklin.className} antialiased xs:text-[1.1rem] xs:mt-2 sm:mt-4 sm:text-[1.1rem] sm:leading-[1.4rem]`}>I’m a software engineer based in Abuja, Nigeria, passionate about leveraging AI and cloud technologies in building innovative software solutions to real-world problems.</p>
-                <div className='flex'>
-                    <Link href="/tomisin_ak_resume.pdf" target='_blank' download={true} title="Download Resume" className='w-fit mt-10 mx-auto flex border-[0.1rem] border-blue-900 text-center items-center text-blue-900 pl-2 pr-4 py-0.5 rounded-md gap-[0.25rem] transition-all ease-in-out duration-100 hover:bg-blue-900 hover:text-white hover:border-[0.15rem] text-[1rem] dark:hover:border-blue-400 dark:hover:text-blue-400
-                    dark:hover:bg-black dark:bg-white
-                    dark:text-black dark:border-white'>
-                        <span className="material-symbols-rounded hover:[--font-FILL:1] hover:[--font-wght:600]">
-                            download
-                        </span>  
+                <div className='flex mt-10 gap-8 justify-center'>
+                    <Link href="#projects" title="Download Resume" className='w-fit text-md flex border-[0.1rem] border-blue-700 text-center items-center pl-2 pr-4 py-0.5 rounded-md gap-[0.5rem] transition-all ease-in-out duration-100 bg-blue-700 text-white border-[0.15rem] text-[1rem]
+                    hover:bg-blue-500 hover:border-blue-500 hover:mt-2 hover:-mb-2'>
+                        <LuAppWindow className='text-xl'/>
+                        Projects       
+                    </Link>
+                    <Link href="/tomisin_ak_resume.pdf" target='_blank' title="View Resume" className='w-fit text-md flex border-[0.1rem] bg-white border-black text-center items-center text-black pl-2 pr-4 py-0.5 rounded-md gap-[0.5rem] transition-all ease-in-out duration-100 hover:text-gray-500 hover:border-gray-500 border-[0.15rem] text-[1rem] hover:-mt-2 hover:mb-2'>
+                        <LuFileText className='text-xl'/> 
                         Resume       
                     </Link>
-                    {/* <Link href="/tomisin_ak_resume.pdf" target='_blank' download={true} title="Download Resume" className='w-fit h-fit mt-10 mx-auto flex border-[0.1rem] border-blue-900 text-center items-center text-blue-900 pl-2 pr-4 py-0.5 rounded-md gap-[0.25rem] transition-all ease-in-out duration-100 hover:bg-blue-900 hover:text-white hover:border-[0.15rem] text-[1rem] dark:hover:border-blue-400 dark:hover:text-blue-400
-                    dark:hover:bg-black dark:bg-white
-                    dark:text-black dark:border-white'>
-                        <span className="material-symbols-rounded hover:[--font-FILL:1] hover:[--font-wght:600]">
-                            download
-                        </span>  
-                        Resume       
-                    </Link> */}
                 </div>
                 
     

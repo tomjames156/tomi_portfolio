@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import gitLogoBlue from "../../public/git-blue.png"
 import earthBlue from "../../public/earth-blue.png"
-import { LuArrowRight } from 'react-icons/lu'
+import { LuArrowRight, LuChevronLeft, LuChevronRight } from 'react-icons/lu'
 import { projectsSlides, projectTiles } from '../lib/placeholder-data'
 import Image from 'next/image'
 
@@ -130,11 +130,11 @@ export default function Projects(){
                     </div>
                 </div>
                 <div className='absolute top-1/2 -left-1 -translate-y-1/2 material-symbols-rounded text-[2.5rem] cursor-pointer hover:-left-2 hover:text-[#343434] hover:scale-[1.1] transition-transform duration-200 xs:-left-2 xs:text-[6rem] xs:hover:-left-4 xs:hover:scale-[1.15]' onClick={prevProject}>
-                    chevron_left
+                    <LuChevronLeft/>
                 </div>
                 <div className='absolute top-1/2 -right-1
                 -translate-y-1/2 material-symbols-rounded text-[2.5rem] cursor-pointer hover:-right-2 hover:text-[#343434] hover:scale-[1.1] transition-transform duration-200 xs:-right-2 xs:text-[6rem] xs:hover:-right-4 xs:hover:scale-[1.15]' onClick={nextProject}>
-                    chevron_right
+                    <LuChevronRight/>
                 </div>
             </motion.div>
             <div className='w-full flex justify-center lg:hidden'>

@@ -6,7 +6,7 @@ import linkedin from "../../public/linkedin.png"
 
 export default function Navbar(){
     return (
-        <nav className="flex justify-between items-end px-2 bg-white xs:px-5 sm:px-10 lg:px-12 py-4 fixed left-0 top-0 w-full z-20 dark:bg-black dark:text-white border border-[#ffffff25]">
+        <nav className="flex justify-between items-end px-2 bg-white xs:px-5 sm:px-10 lg:px-12 py-4 fixed left-0 top-0 w-full z-20 dark:bg-black dark:text-white border border-[#ffffff25] border-b-[1px] border-t-0 border-r-0 border-l-0">
             <div className="flex-2 flex items-center gap-3">
                 <Link href='/' className="font-bold text-[0.95rem] hover:text-blue-400 transition transition-all duration-200 2xs:text-[1rem] xs:text-[1.2rem">tom1sin</Link>
                 <div className="hidden sm:block">                
