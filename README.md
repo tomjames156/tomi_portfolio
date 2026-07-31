@@ -1,6 +1,6 @@
 # Tomi's Portfolio
 
-Personal developer portfolio site, built with Next.js.
+My personal professional developer portfolio site, built with Next.js.
 
 ## Stack
 
